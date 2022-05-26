@@ -1,0 +1,37 @@
+
+.greeting {
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.err_msg {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: red;
+}
+
+.input{
+    margin-right: 10px;
+}
+.btn{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+.counter{
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1;
+}

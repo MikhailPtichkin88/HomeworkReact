@@ -1,0 +1,93 @@
+.blue {
+    border: 2px solid #00776A;
+    box-shadow: initial;
+    color: black;
+}
+
+.blue:hover{
+    border-color: #009E8E;
+    box-shadow: 0px 2px 4px rgba(31, 139, 36, 0.18), 0px 4px 8px rgba(31, 139, 36, 0.18);
+}
+
+.blue:active,
+.blue:focus{
+    box-shadow: initial;
+    outline-color: #00776A;
+    border-color: #009E8E;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testSpanError {
+    color: blue;
+}
+
+.line{
+    margin: 20px 0;
+    width: 200px;
+    height: 1px;
+    background-color: black;
+    margin-right: auto;
+}
+
+.label{
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: -10px;*/
+    position:relative;
+}
+
+.label::before{
+    position: absolute;
+    content: '';
+    top: calc(50% - 2px);
+    left: -15px;
+    width: 8px;
+    height: 8px;
+    background-color: #DA100B;
+    border-radius: 50% ;
+}
+
+.altCheckbox{
+   position: relative;
+}
+
+.altCheckbox::before{
+    position: absolute;
+    content: '';
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #818181;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-transition: color 0.2s, background-color 0.2s, outline 0.2s;
+    -moz-transition: color 0.2s, background-color 0.2s, outline 0.2s;
+    -ms-transition: color 0.2s, background-color 0.2s, outline 0.2s;
+    -o-transition: color 0.2s, background-color 0.2s, outline 0.2s;
+    transition: color 0.2s, background-color 0.2s, outline 0.2s;
+}
+
+.altCheckbox:checked::before{
+    border-color: #0F56B3;
+    background-color: #0F56B3;
+    outline: 5px solid #C5DCFA;
+    background-image: url(../../assets/check.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.altCheckbox:hover::before{
+    border-color: #0F56B3;
+    box-shadow: 0 2px 2px rgba(197, 220, 250, 1), 0 2px 2px rgba(197, 220, 250, 1);
+}
+
+.altCheckbox:focus::before{
+    border-color: #0F56B3;
+}

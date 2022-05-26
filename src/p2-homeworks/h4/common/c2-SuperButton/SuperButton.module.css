@@ -1,0 +1,61 @@
+.default {
+    min-width: 100px;
+    padding: 10px 5px;
+    background-color: #0F56B3;
+    color: #C5DCFA;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(15, 86, 179, 0.2), 0 2px 4px rgba(15, 86, 179, 0.2);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.default:disabled{
+    background-color: rgba(224, 224, 224, 0.5);
+    color:  #616161;
+    box-shadow: 0 1px 2px rgba(224, 224, 224, 0.2), 0 2px 4px rgba(224, 224, 224, 0.2);
+}
+.default:disabled:hover{
+    background-color: rgba(224, 224, 224, 0.5);
+}
+.default:disabled:active{
+    box-shadow: 0 1px 2px rgba(224, 224, 224, 0.2), 0 2px 4px rgba(224, 224, 224, 0.2);
+}
+
+.default:hover{
+    background-color: #1672EC;
+}
+.default:active{
+    background-color: #0F56B3;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.default:focus{
+    outline: 1px solid #C5DCFA;
+}
+
+.red {
+    background: #DA100B;
+    color: #FCD0CF;
+    box-shadow: 0px 1px 2px rgba(218, 16, 11, 0.2), 0px 2px 4px rgba(218, 16, 11, 0.2);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.red:hover{
+    background-color: #F5413D;
+}
+.red:active{
+    background-color: #DA100B;
+}
+.red:focus{
+    outline: 1px solid #FCD0CF;
+}
