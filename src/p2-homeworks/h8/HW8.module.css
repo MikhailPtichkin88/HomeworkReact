@@ -1,0 +1,21 @@
+.wrapper{
+    width: 300px;
+    padding:20px;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    min-width: 80px;
+    background-color: #1672EC;
+}
+.btn_wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 20px;
+}
