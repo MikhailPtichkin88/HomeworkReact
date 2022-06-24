@@ -1,0 +1,75 @@
+.clockWrapper{
+    width: 400px;
+
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.clockTimeWrapper{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.clockTime{
+    position: relative;
+    display: inline-block;
+    min-width: 66px;
+    min-height: 64px;
+    font-size: 36px;
+    line-height: 1;
+    padding: 12px 12px;
+    border: 2px solid #1672EC;
+    color: #0A3977;
+    background-color: #C5DCFA;
+    border-radius: 12px;
+}
+
+.clockTime:not(:last-of-type){
+    margin-right: 20px;
+}
+
+.clockTime:not(:last-of-type):after{
+    content: ':';
+    position: absolute;
+    font-size: 50px;
+    line-height: 1;
+    color: #0A3977;
+    top: 0;
+    right: -17px;
+}
+
+.clockDateWrapper{
+    margin: 0 auto;
+    width: 300px;
+    min-height: 72px;
+    padding: 10px 20px;
+    border: 2px solid #1672EC;
+    border-radius: 12px;
+   text-align: center;
+    margin-bottom: 20px;
+}
+
+.clockDate,
+.clockDay{
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+    padding: 10px 3px;
+}
+.clockBtnWrapper{
+
+   text-align: center;
+}
+.clockBtn{
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    min-width: 80px;
+    background-color: #1672EC;
+}
+.clockBtn:not(:last-of-type){
+    margin-right: 10px;
+}
+
