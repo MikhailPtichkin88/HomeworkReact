@@ -1,0 +1,13 @@
+.wrapper{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    margin: 20px 0 0 30px;
+    border: 1px solid #5096F1;
+    border-radius: 20px ;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background-color: #1672EC;
+}
