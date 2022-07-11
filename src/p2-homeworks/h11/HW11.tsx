@@ -1,10 +1,20 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import styles from './common/c7-SuperRange/SuperRange.module.css'
 
 function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
+
+    const onChangeRange = (value: number) => {
+        setValue1(value)
+    }
+
+    const onChangeDoubleRange = (values:[number,number])=>{
+        setValue1(values[0])
+        setValue2(values[1])
+    }
 
     return (
         <div>
@@ -12,19 +22,22 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
-                <span>{value1}</span>
-                <SuperRange
+            <div style={{margin:"10px 0"}}>
+                <span className={styles.label}>{value1}</span>
+                <SuperRange value={value1} onChangeRange={onChangeRange}
+                            className={styles.range}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div className={styles.doubleRangeBlock}>
+                <span className={styles.label}>{value1}</span>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                   value={[value1,value2]}
+                   onChangeDoubleRange={onChangeDoubleRange}
+
                 />
-                <span>{value2}</span>
+                <span className={styles.label}>{value2}</span>
             </div>
 
             <hr/>

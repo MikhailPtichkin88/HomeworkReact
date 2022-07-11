@@ -17,7 +17,6 @@ function Clock() {
         const id: number = window.setInterval(() => {
             setDate(new Date())
 
-
         }, 1000)
         setTimerId(id)
     }

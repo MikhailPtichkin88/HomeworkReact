@@ -1,3 +1,126 @@
+
+.label{
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 48px;
+    border: 1px solid #0F56B3;
+    border-radius: 6px;
+    background-color: #C5DCFA;
+    margin-left: 10px;
+    text-align: center;
+}
 .range {
+    -webkit-appearance: none;
+    width: 250px;
+    background: transparent;
+    margin-left: 20px;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -ms-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.range:focus{
+    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
+}
+
+
+.range::-ms-track{
+
+    width: 300px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 16px;
+    border-radius: 6px;
+    background: #1672EC;
+    cursor: pointer;
+    margin-top: -10px;
+    border: 1px solid #0F56B3;
+}
+
+.range::-moz-range-thumb{
+    height: 24px;
+    width: 16px;
+    border-radius: 6px;
+    background: #3071a9;
+    cursor: pointer;
+}
+.range::-ms-thumb{
+    height: 24px;
+    width: 16px;
+    border-radius: 6px;
+    background: #0F56B3;
+    cursor: pointer;
+}
+
+.range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #1672EC;
+    border-radius: 6px;
+}
+
+.range:focus::-webkit-slider-runnable-track {
+    box-shadow: 0px 2px 4px rgba(80, 150, 241, 0.18), 0px 4px 8px rgba(80, 150, 241, 0.36);
+}
+
+.range::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #1672EC;
+    border-radius: 6px;
+}
+
+.range::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #1672EC;
+    border-radius: 6px;
+}
+.range::-ms-fill-lower {
+    background: #2a6495;
+    border: 1px solid #010101;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.range:focus::-ms-fill-lower {
+    background: #3071a9;
+}
+.range::-ms-fill-upper {
+    background: #3071a9;
+    border: 1px solid #010101;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.range:focus::-ms-fill-upper {
+    background: #367ebd;
+}
+
+.doubleRange{
+    width: 250px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-bottom: 20px;
 
 }
+
+.doubleRangeBlock{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+

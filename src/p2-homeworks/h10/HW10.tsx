@@ -21,7 +21,7 @@ function HW10() {
         }, 3000)
         console.log('loading...')
     };
-    debugger
+
     return (
         <div>
             <hr/>
