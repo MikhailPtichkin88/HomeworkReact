@@ -1,17 +1,22 @@
-import React, {SelectHTMLAttributes,MouseEvent, DetailedHTMLProps, ChangeEvent, useState} from 'react'
+import React, {SelectHTMLAttributes, MouseEvent, DetailedHTMLProps, ChangeEvent, useState} from 'react'
 import c from './SuperSelect.module.scss'
+import {ColorType} from "../../../h12/bll/themeReducer";
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
     options?: any[]
     onChangeOption?: (option: any) => void
-
+    selectClass?: string
+    optionsClass?: string
+    optionsClassesArray?: string[]
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = (
     {
-
+        optionsClass,
+        optionsClassesArray,
+        selectClass,
         value,
         options,
         onChange, onChangeOption,
@@ -24,7 +29,6 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     const dropDownIconClass = menuList ? `${c.dropdown__title} ${c.dropdown__title_active}` : `${c.dropdown__title}`
 
     const dropDownMenuClass = menuList ? `${c.dropdown__menu} ${c.dropdown__menu_active}` : `${c.dropdown__menu}`
-
 
 
     const mappedOptions: any[] = options ? options.map((opt, i) => {
@@ -44,7 +48,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     const openMenuHandler = () => {
         setMenuList(!menuList)
     }
-    const chooseSelect = (event:MouseEvent<HTMLLIElement>) => {
+    const chooseSelect = (event: MouseEvent<HTMLLIElement>) => {
         setMenuList(!menuList)
         console.log(event)
         onChangeOption && onChangeOption(event.currentTarget.getAttribute('value'))
@@ -59,7 +63,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
             <ul className={c.dropdown}>
 
-                <li className={dropDownIconClass}>
+                <li className={dropDownIconClass + ` ${selectClass}`}>
                     <button className={c.dropdown__title_link}
                             type="button"
                             onClick={openMenuHandler}>
@@ -69,11 +73,14 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
                     <ul className={dropDownMenuClass}>
 
                         {
-                            options && options?.map(el => {
+                            options && options?.map((el, i) => {
+
+                                let optionClasses = optionsClassesArray && optionsClassesArray.find(className => className.includes(el))
+
                                 return <li key={"option" + "-" + el}
-                                    className={c.dropdown__item}
-                                    onClick={chooseSelect}
-                                    value={el}>
+                                           className={c.dropdown__item + ` ${optionsClass} ${optionClasses}`}
+                                           onClick={chooseSelect}
+                                           value={el}>
                                     {el}
                                 </li>
                             })

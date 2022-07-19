@@ -1,3 +1,11 @@
+.default {
+    background: azure;
+}
+
+.default-text {
+    color: darkslateblue;
+}
+
 .dark {
     background: dimgrey;
 }
@@ -20,4 +28,10 @@
 
 .some-text {
     color: darkslateblue;
+}
+
+.optionsBorderColor,
+.selectBorderColor {
+    border-color: #000;
+    color: #0d0d0d;
 }

@@ -11,7 +11,7 @@ function HW11() {
         setValue1(value)
     }
 
-    const onChangeDoubleRange = (values:[number,number])=>{
+    const onChangeDoubleRange = (values: [number, number]) => {
         setValue1(values[0])
         setValue2(values[1])
     }
@@ -22,7 +22,7 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div style={{margin:"10px 0"}}>
+            <div style={{margin: "10px 0"}}>
                 <span className={styles.label}>{value1}</span>
                 <SuperRange value={value1} onChangeRange={onChangeRange}
                             className={styles.range}
@@ -33,8 +33,8 @@ function HW11() {
             <div className={styles.doubleRangeBlock}>
                 <span className={styles.label}>{value1}</span>
                 <SuperDoubleRange
-                   value={[value1,value2]}
-                   onChangeDoubleRange={onChangeDoubleRange}
+                    value={[value1, value2]}
+                    onChangeDoubleRange={onChangeDoubleRange}
 
                 />
                 <span className={styles.label}>{value2}</span>

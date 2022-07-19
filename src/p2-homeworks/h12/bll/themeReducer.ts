@@ -1,14 +1,28 @@
 const initState = {
-
+    colorsPool: ['dark', 'red', 'some', 'default'] as Array<ColorType>,
+    themeColor: 'default' as ColorType
 };
 
-export const themeReducer = (state = initState, action: any): any => { // fix any
+export type ColorType = 'dark' | 'red' | 'some' | 'default'
+type initialStateType = typeof initState
+
+
+export const themeReducer = (state: initialStateType = initState, action: changeThemeACType): initialStateType => { // fix any
     switch (action.type) {
-        case "": {
-            return state;
+        case "CHANGE-THEME-COLOR": {
+            return {...state, themeColor: action.payload.color}
         }
-        default: return state;
+        default:
+            return state;
     }
 };
 
-export const changeThemeC = (): any => {}; // fix any
+type changeThemeACType = ReturnType<typeof changeThemeAC>
+export const changeThemeAC = (color: ColorType) => {
+    return {
+        type: "CHANGE-THEME-COLOR",
+        payload: {
+            color
+        }
+    } as const
+}; // fix any
