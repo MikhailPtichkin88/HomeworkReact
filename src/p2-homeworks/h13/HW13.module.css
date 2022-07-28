@@ -1,0 +1,16 @@
+.textField {
+    display: block;
+    padding: 20px;
+    margin: 20px 10px 10px;
+    width: 300px;
+    border: 2px solid #5096F1;
+    border-radius: 12px;
+}
+
+.textItem {
+    margin-bottom: 10px;
+}
+
+.textItem span {
+    font-weight: bold;
+}
